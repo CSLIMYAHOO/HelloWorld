@@ -1,0 +1,304 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Data_Manipulation_Exercise" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="833,7884.5" sap2010:WorkflowViewState.IdRef="Data_Manipulation_Exercise_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Data_Manipulation_Exercise" sap:VirtualizedContainerService.HintSize="376,7819.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="varName" />
+      <Variable x:TypeArguments="x:String" Name="firstName" />
+      <Variable x:TypeArguments="x:String" Name="lastName" />
+      <Variable x:TypeArguments="x:String" Name="Statement" />
+      <Variable x:TypeArguments="x:String" Name="varWord1" />
+      <Variable x:TypeArguments="x:String" Name="varWord2" />
+      <Variable x:TypeArguments="x:String" Name="varWord3" />
+      <Variable x:TypeArguments="s:String[]" Name="listName" />
+      <Variable x:TypeArguments="x:String" Name="StrOfListName" />
+      <Variable x:TypeArguments="x:String" Name="varPlace" />
+      <Variable x:TypeArguments="x:String" Name="varLine" />
+      <Variable x:TypeArguments="x:String" Name="day" />
+      <Variable x:TypeArguments="x:String" Name="initialText" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap2010:Annotation.AnnotationText="Assign Peter to varName" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[varName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Peter Smith</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <WriteLine sap2010:Annotation.AnnotationText="varName = Peter Smith&#xA;&#xA;Command : varName.Length&#xA;&#xA;Display number of characters in varName (including spaces)&#xA;&#xA;Answer : 11" DisplayName="Write Line - .Length" sap:VirtualizedContainerService.HintSize="334,202" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[varName.Length.ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="varName = Peter Smith&#xA;&#xA;Command : &#xA;a. varName.Substring(1,6)&#xA;b. varName.Substring(6)&#xA;&#xA;Extract characters from varName.&#xA;&#xA;Answer:&#xA;a. eter S&#xA;    1 - Index number. Starting  &#xA;          character to extract (i.e. &quot;e&quot;)&#xA;    6 - Number of characters to &#xA;          extract&#xA;b. Smith&#xA;    ---&gt; Starting from index(6) to &#xA;            extract till the end IF THE &#xA;            NUMBER OF CHARACTERS        &#xA;            TO EXTRACT IS NOT &#xA;            SPECIFIED&#xA;" DisplayName="Write Line - .Substring" sap:VirtualizedContainerService.HintSize="334,410" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[varName.Substring(1,6)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="varName = Peter Smith&#xA;&#xA;Commands &#xA;a: varName.Split(&quot; &quot;c)(0)      OR&#xA;    varName.Split(&quot; &quot;c).First&#xA;b: varName.Split(&quot; &quot;c)(1)      OR&#xA;    varName.Split(&quot; &quot;c).Last&#xA;c: varName.Split(&quot; &quot;c)(0)(4)&#xA;d: varName.Split(&quot; &quot;c)(1)(3)&#xA;&#xA;Split the VarName from String to String[] {&quot;Peter&quot;, &quot;Smith&quot;} and display according to Index Number.&#xA;&#xA;Answers : &#xA;a: Peter &#xA;   ---&gt; Index(0) in {&quot;Peter&quot;, &quot;Smith&quot;} &#xA;b: Smith &#xA;   ---&gt; Index(1) in {&quot;Peter&quot;, &quot;Smith&quot;}&#xA;c: r &#xA;   ---&gt; Index(4) in Peter&#xA;d: t &#xA;   ---&gt; Index(3) in Smith&#xA;" DisplayName="Write Line - .Split(&quot; &quot;c)" sap:VirtualizedContainerService.HintSize="334,474" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[varName.Split(&quot; &quot;c)(1)(3)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[varLine]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["I have two buckets,#one is red,#and the other is blue in color."]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine sap2010:Annotation.AnnotationText="varLine = I have two buckets,#one is red,#and the other is blue in color.&#xA;&#xA;Commands &#xA;a: varLine.Split(&quot;,&quot;c)(0)         OR&#xA;    varLine.Split(&quot;,&quot;c).First&#xA;b: varLine.Split(&quot;,&quot;c)(1)         OR&#xA;c: varLine.Split(&quot;,&quot;c)(2)         OR&#xA;    varLine.Split(&quot;,&quot;c).Last&#xA;&#xA;Split the VarList from String to String[] {&quot;I have two buckets&quot;, &quot;one is red&quot;, &quot;and the other is blue in color.&quot;} and display according to Index Number.&#xA;&#xA;Answers : &#xA;a:  I have two buckets &#xA;   ---&gt; Index(0) in  {&quot;I have two &#xA;           buckets&quot;, &quot;one is red&quot;, &quot;and &#xA;           the other is blue in color.&quot;} &#xA;b: #one is red &#xA;   ---&gt; Index(1) in  {&quot;I have two &#xA;           buckets&quot;, &quot;one is red&quot;, &quot;and &#xA;           the other is blue in color.&quot;} &#xA;c: #and the other is blue in color&#xA;   ---&gt; Index(1) in  {&quot;I have two &#xA;           buckets&quot;, &quot;one is red&quot;, &quot;and &#xA;           the other is blue in color.&quot;} &#xA;" DisplayName="Write Line - .Split(&quot;,&quot;c)" sap:VirtualizedContainerService.HintSize="334,570" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[varLine.Split(&quot;,&quot;c).Last]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="varName = Peter Smith&#xA;&#xA;Commands &#xA;a: varName.IndexOf(&quot;e&quot;)&#xA;b: varName.LastIndexOf(&quot;t&quot;)&#xA;c: varName.Substring(0, &#xA;    varName.IndexOf(&quot;m&quot;))&#xA;d. varName.Substring(varName.IndexOf(&quot; &quot;) + 1)&#xA;&#xA;IndexOf returns the index number of first occurance of a character in the string&#xA;&#xA;Answers : &#xA;a: 1 &#xA;   ---&gt; Index(1) in {&quot;Peter Smith&quot;} &#xA;b: 9&#xA;   ---&gt; Index(9) in {&quot;Peter Smith&quot;}&#xA;c: Peter S&#xA;   ---&gt; viaName.Substring(0,7)&#xA;   ---&gt; Index(7) in {&quot;Peter Smith&quot;}&#xA;d. Smith&#xA;    ---&gt; varName.IndexOf(&quot; &quot;) + 1 &#xA;            = 5 + 1 = 6&#xA;    ---&gt; Print from index(6) till end&#xA;    ---&gt; viaName.Substring(6)&#xA;&#xA;" DisplayName="Write Line - .IndexOf" sap:VirtualizedContainerService.HintSize="334,538" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[varName.Substring(0, varName.IndexOf(&quot;m&quot;))]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="334,309.5" sap2010:WorkflowViewState.IdRef="Comment_1" Text="day = &quot;First weekend day is Saturday&quot;&#xA;&#xA;day.LastIndexOf(&quot;a&quot;) ---&gt; 27&#xA;&#xA;day.IndexOf(&quot;a&quot;) ---&gt; 15&#xA;&#xA;day.IndexOf(&quot;day&quot;) ---&gt; 14&#xA;&#xA;day.substring(day.IndexOf(&quot;day&quot;)) ---&gt; &quot;day is Saturday&#xA;&#xA;day.substring(14,6)  ---&gt; &quot;day is&quot;&#xA;&#xA;day.substring(14) ---&gt; &quot;day is Saturday&quot;&#xA;&#xA;" />
+    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[day]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">First weekend day is Saturday</InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine sap2010:Annotation.AnnotationText="day = &quot;First weekend day is Saturday&quot;&#xA;&#xA;Command:&#xA;day.substring(day.IndexOf(&quot;day&quot;))&#xA;&#xA;Combine .Substring and .IndexOf for printing&#xA;&#xA;Ans: day is Saturday&#xA;        --&gt; IndexOf &quot;day&quot; and print &#xA;               from day till the end&#xA;" DisplayName="Write Line .Substring &amp; .IndexOf" sap:VirtualizedContainerService.HintSize="334,282" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[day.substring(day.IndexOf(&quot;day&quot;))]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="334,407" sap2010:WorkflowViewState.IdRef="Comment_4" Text="&quot;My Address is Block A#102, building number 14&quot;&#xA;&#xA;Q1: initialText.Substring(15,3)&#xA;&#xA;Ans: &quot;loc&quot;&#xA;&#xA;Q2: initialText.Split(&quot;A&quot;c).Last&#xA;&#xA;Ans: &quot;#102, building number 14&quot;&#xA;&#xA;Q3: (initialText.Split(&quot;A&quot;c).Last).Split(&quot;,&quot;c).First&#xA;&#xA;Ans: &quot;#102&quot;&#xA;&#xA;Q4: initialText.Substring(initialTextIndexOf(&quot;1&quot;), 3) &#xA;&#xA;Ans: &quot;102&quot;" />
+    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[initialText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">My Address is Block A#102, building number 14</InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine sap2010:Annotation.AnnotationText="initialText = &quot;My Address is Block A#102, building number 14&quot;&#xA;&#xA;Command:&#xA;initialText.Split(&quot;A&quot;c).Last&#xA;&#xA;Ans: #102, building number 14" DisplayName="Write Line - .Split" sap:VirtualizedContainerService.HintSize="334,186" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[initialText.Split(&quot;A&quot;c).Last]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="initialText = &quot;My Address is Block A#102, building number 14&quot;&#xA;&#xA;Command:&#xA;(initialText.Split(&quot;A&quot;c).Last).Split(&quot;,&quot;c).First&#xA;&#xA;Ans: #102 &#xA;" DisplayName="Write Line - .split" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[(initialText.Split(&quot;A&quot;c).Last).Split(&quot;,&quot;c).First]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="initialText = &quot;My Address is Block A#102, building number 14&quot;&#xA;&#xA;Command:&#xA;initialText.Substring(initialText.IndexOf(&quot;1&quot;) , 3)&#xA;&#xA;Ans: 102&#xA;" DisplayName="Write Line - .Split &amp; .IndexOf" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="[initialText.Substring(initialText.IndexOf(&quot;1&quot;), 3)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[firstName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Jack</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Morris</InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine sap2010:Annotation.AnnotationText="firstName = Jack&#xA;lastName = Morris&#xA;&#xA;Command : &#xA;String.Concat(firstName, &quot; &quot;, lastName)&#xA;&#xA;Concat the first name and last name with space in between.&#xA;&#xA;Answer : Jack Morris" DisplayName="Write Line - String.Concat" sap:VirtualizedContainerService.HintSize="334,250" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[String.Concat(firstName, &quot; &quot;, lastName)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <Assign sap2010:Annotation.AnnotationText="listName is the list string variable&#xA;i.e. String[]" sap:VirtualizedContainerService.HintSize="334,104" sap2010:WorkflowViewState.IdRef="Assign_18">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[listName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[{"James", "Peter", "Henry", "Hary"}]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <Assign sap2010:Annotation.AnnotationText="Convert String[] to String variable first before using write line to display " sap:VirtualizedContainerService.HintSize="334,104" sap2010:WorkflowViewState.IdRef="Assign_19">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[StrOfListName]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[String.join(",", listName)]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <WriteLine sap2010:Annotation.AnnotationText="listName = {&quot;James&quot;, &quot;Peter&quot;, &quot;Henry&quot;, &quot;Hary&quot;}&#xA;&#xA;Command : &#xA;a. String.Concat(&quot;All my colleages &#xA;    names are &quot;, StrOfListName)&#xA;&#xA;Convert all the elements in String[]  to string variable first then use string varible to display the names&#xA;&#xA;Answer : &#xA;a. All my colleages names are &#xA;   James,Peter,Henry,Hary&#xA;" DisplayName="Write Line - String.Concat" sap:VirtualizedContainerService.HintSize="334,314" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[String.Concat(&quot;All my colleages names are &quot;, StrOfListName)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <WriteLine sap2010:Annotation.AnnotationText="listName = {&quot;James&quot;, &quot;Peter&quot;, &quot;Henry&quot;, &quot;Hary&quot;}&#xA;&#xA;Command : &#xA;a. &quot;All my colleages names are &quot; + &#xA;    String.Join(&quot;,&quot;, listName)&#xA;b. &quot;All my colleages names are &quot; + &#xA;    String.Join(&quot;|&quot;, listName)&#xA;&#xA;Join all the elements in the list string &#xA;&#xA;Answer : &#xA;a. All my colleages names are &#xA;    James,Peter,Henry,Hary&#xA;b. All my colleages names are &#xA;    James|Peter|Henry|Hary&#xA;" DisplayName="Write Line - String.Join" sap:VirtualizedContainerService.HintSize="334,364" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;All my colleages names are &quot; + &#xA;    String.Join(&quot;|&quot;, listName)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[Statement]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">Hi, my full name is Jack Morris. I live in USA </InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine sap2010:Annotation.AnnotationText="Statement = &quot;Hi, my full name is Jack Morris. I live in USA &quot;&#xA;&#xA;Command : Statement.Contains(&quot;USA&quot;)&#xA;&#xA;Check word whether exists in the statement. Output is Boolean. &#xA;If word&#xA;Exist --&gt; return True&#xA;non-Exist --&gt; return False&#xA;&#xA;Answer : True" DisplayName="Write Line - .Contains" sap:VirtualizedContainerService.HintSize="334,282" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[Statement.Contains(&quot;USA&quot;).ToString]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[varWord1]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Today</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[varWord2]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Monday</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[varWord3]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Tuesday</InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine sap2010:Annotation.AnnotationText="viaWord1 = Today&#xA;viaWord2 = Monday&#xA;viaWord3 = Tuesday&#xA;&#xA;Command : &#xA;a. String.Format(&quot;{0} is {1} and &#xA;    tomorrow is {2}&quot;, varWord1, &#xA;    varWord2, varWord3)&#xA;b. String.Format(&quot;{0} is {1} and &#xA;    tomorrow is {2}&quot;, varWord1, &#xA;    varWord3, varWord2)&#xA;&#xA;Format the statement&#xA;&#xA;Answer : &#xA;a. Today is Monday and tomorrow &#xA;    is Tuesday&#xA;b. Today is Tuesday and tomorrow &#xA;    is Monday&#xA;" DisplayName="Write Line - String.Format" sap:VirtualizedContainerService.HintSize="334,394" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[String.Format(&quot;{0} is {1} and tomorrow is {2}&quot;, varWord1, varWord2, varWord3)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[varPlace]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">I live in India and India is a nice place to visit</InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine sap2010:Annotation.AnnotationText="varPlace = I live in India and India is a nice place to visit&#xA;&#xA;Command : varPlace.Replace(&quot;India&quot;, &quot;Australia&quot;)&#xA;&#xA;Replace the word Ïndia by Australia&#xA;&#xA;Answer : I live in Australia and Australia is a nice place to visit&#xA;" DisplayName="Write Line - .Replace" sap:VirtualizedContainerService.HintSize="334,250" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[varPlace.Replace(&quot;India&quot;, &quot;Australia&quot;)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </WriteLine>
+  </Sequence>
+</Activity>
